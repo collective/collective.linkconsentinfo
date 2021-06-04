@@ -7,9 +7,10 @@
   -*- extra stuff goes here -*-
 
   <browser:page
-    name="link-consent-info"
-    for="Products.CMFCore.interfaces.IFolderish"
+    name="link_redirect_view"
+    for="plone.app.contenttypes.interfaces.ILink"
     class=".link_consent_info.LinkConsentInfo"
+    layer="collective.linkconsentinfo.interfaces.ICollectiveLinkconsentinfoLayer"
     template="link_consent_info.pt"
     permission="zope2.View"
     />

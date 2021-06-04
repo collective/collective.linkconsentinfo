@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
 from collective.linkconsentinfo.testing import (
-    COLLECTIVE_LINKCONSENTINFO_INTEGRATION_TESTING  # noqa: E501,
+    COLLECTIVE_LINKCONSENTINFO_INTEGRATION_TESTING  # noqa: E501,,
 )
 from plone import api
 from plone.app.testing import setRoles, TEST_USER_ID

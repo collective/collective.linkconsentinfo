@@ -4,7 +4,5 @@
 
   -*- extra stuff goes here -*-
 
-  <include file="my_custom_index.zcml" />
-
 
 </configure>

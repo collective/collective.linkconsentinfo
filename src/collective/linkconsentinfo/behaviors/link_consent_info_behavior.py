@@ -2,6 +2,8 @@
 
 from collective.linkconsentinfo import _
 from plone import schema
+from plone.app.z3cform.widget import SingleCheckBoxBoolFieldWidget
+from plone.autoform import directives
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
 from Products.CMFPlone.utils import safe_hasattr
@@ -15,14 +17,20 @@ class ILinkConsentInfoBehaviorMarker(Interface):
 
 @provider(IFormFieldProvider)
 class ILinkConsentInfoBehavior(model.Schema):
-    """
+    """ LinkConsentInfoBehavior schema interface
     """
 
-    project = schema.TextLine(
-        title=_(u'Project'),
-        description=_(u'Give in a project name'),
-        required=False,
+    directives.widget(enable_consent_info=SingleCheckBoxBoolFieldWidget)
+    enable_consent_info = schema.Bool(
+        title=_(
+            u'Enable Consent Info',
+        ),
+        description=_(
+            u'This will enable a consent info page for this link.',
+        ),
+        default=False,
     )
+
 
 
 @implementer(ILinkConsentInfoBehavior)
@@ -32,11 +40,11 @@ class LinkConsentInfoBehavior(object):
         self.context = context
 
     @property
-    def project(self):
-        if safe_hasattr(self.context, 'project'):
-            return self.context.project
+    def enable_consent_info(self):
+        if safe_hasattr(self.context, 'enable_consent_info'):
+            return self.context.enable_consent_info
         return None
 
-    @project.setter
-    def project(self, value):
-        self.context.project = value
+    @enable_consent_info.setter
+    def enable_consent_info(self, value):
+        self.context.enable_consent_info = value

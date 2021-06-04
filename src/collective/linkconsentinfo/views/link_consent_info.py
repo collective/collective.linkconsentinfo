@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from collective.linkconsentinfo import _
+from collective.linkconsentinfo.controlpanels.link_consent_info import (
+    ILinkConsentInfoControlPanel,
+)
 from plone.app.contenttypes.browser.link_redirect_view import (
     LinkRedirectView,
     NON_REDIRECTABLE_URL_SCHEMES,
@@ -35,6 +38,11 @@ class LinkConsentInfo(LinkRedirectView):
 
         registry = getUtility(IRegistry)
         settings = registry.forInterface(ITypesSchema, prefix="plone")
+        link_consent_info_settings = registry.forInterface(
+            ILinkConsentInfoControlPanel, prefix="linkconsent"
+        )
+        self.consent_info_text = link_consent_info_settings.info
+
         redirect_links = settings.redirect_links
 
         can_edit = mtool.checkPermission("Modify portal content", context)

@@ -24,29 +24,19 @@
     :alt: License
 
 
-==========================
-collective.linkconsentinfo
-==========================
+==============================
+collective.linkconsentinfo WIP
+==============================
 
-Tell me what your product does
+A consent info page for Plone Links, which allows you to show a custom info message before the user open's the link.
 
 Features
 --------
 
-- Can be bullet points
+- LinkConsentInfo behavior, add's a checkbox to enable a consent info page for a link object
+- Prevent redirection when link consent info is enabled
+- Control panel to define a custom html text to show to the user, before she follows the link
 
-
-Examples
---------
-
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
-
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
 
 
 Translations
@@ -54,7 +44,8 @@ Translations
 
 This product has been translated into
 
-- Klingon (thanks, K'Plai)
+- English
+- German
 
 
 Installation
@@ -78,14 +69,12 @@ Contribute
 
 - Issue Tracker: https://github.com/collective/collective.linkconsentinfo/issues
 - Source Code: https://github.com/collective/collective.linkconsentinfo
-- Documentation: https://docs.plone.org/foo/bar
 
 
 Support
 -------
 
 If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
 
 
 License

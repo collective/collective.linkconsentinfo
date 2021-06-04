@@ -16,11 +16,11 @@ msgstr ""
 
 #: collective/linkconsentinfo/controlpanels/link_consent_info.py:20
 msgid "Consent Info Message"
-msgstr ""
+msgstr "Datenschutzhinweis"
 
 #: collective/linkconsentinfo/behaviors/link_consent_info_behavior.py:25
 msgid "Enable Consent Info"
-msgstr ""
+msgstr "Datenschutzhinweis aktivieren"
 
 #: collective/linkconsentinfo/configure.zcml:28
 msgid "Installs the collective.linkconsentinfo add-on."
@@ -28,7 +28,7 @@ msgstr ""
 
 #: collective/linkconsentinfo/behaviors/link_consent_info_behavior.py:28
 msgid "This will enable a consent info page for this link."
-msgstr ""
+msgstr "Aktiviert einen Datenschutzhinweis für diesen Link"
 
 #: collective/linkconsentinfo/configure.zcml:37
 msgid "Uninstalls the collective.linkconsentinfo add-on."

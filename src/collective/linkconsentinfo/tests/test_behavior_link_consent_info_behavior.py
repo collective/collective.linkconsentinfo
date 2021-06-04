@@ -3,7 +3,7 @@ from collective.linkconsentinfo.behaviors.link_consent_info_behavior import (
     ILinkConsentInfoBehaviorMarker,
 )
 from collective.linkconsentinfo.testing import (
-    COLLECTIVE_LINKCONSENTINFO_INTEGRATION_TESTING  # noqa,
+    COLLECTIVE_LINKCONSENTINFO_INTEGRATION_TESTING  # noqa,,
 )
 from plone.app.testing import setRoles, TEST_USER_ID
 from plone.behavior.interfaces import IBehavior

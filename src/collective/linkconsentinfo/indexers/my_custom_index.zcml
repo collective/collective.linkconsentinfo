@@ -1,0 +1,9 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <adapter factory=".my_custom_index.dummy"
+    name="my_custom_index" />
+
+  <adapter factory=".my_custom_index.my_custom_index"
+    name="my_custom_index" />
+
+</configure>

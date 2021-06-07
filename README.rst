@@ -2,8 +2,8 @@
    If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
    This text does not appear on pypi or github. It is a comment.
 
-.. image:: https://travis-ci.org/collective/collective.linkconsentinfo.svg?branch=master
-    :target: https://travis-ci.org/collective/collective.linkconsentinfo
+.. image:: https://github.com/collective/collective.linkconsentinfo/workflows/CI/badge.svg
+    :target: https://github.com/collective/collective.linkconsentinfo/actions
 
 .. image:: https://coveralls.io/repos/github/collective/collective.linkconsentinfo/badge.svg?branch=master
     :target: https://coveralls.io/github/collective/collective.linkconsentinfo?branch=master

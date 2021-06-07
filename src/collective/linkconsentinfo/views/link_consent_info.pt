@@ -19,7 +19,10 @@
       Others will be immediately redirected to the link's target URL.
     </span>
   </div>
-  <div class="link-consent-info-message" tal:content="structure view/consent_info_text" />
+  <div class="link-consent-info-message"
+    tal:condition="nocall:view/context/enable_consent_info"
+    tal:content="structure view/consent_info_text"
+    />
   <p>
     <span i18n:translate="link_address">The link address is:</span>
     <a tal:attributes="href view/absolute_target_url" tal:content="view/url">remote url</a>

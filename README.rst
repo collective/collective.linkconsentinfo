@@ -2,7 +2,7 @@
    If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
    This text does not appear on pypi or github. It is a comment.
 
-.. image:: https://github.com/collective/collective.linkconsentinfo/workflows/CI/badge.svg
+.. image:: https://github.com/collective/collective.linkconsentinfo/workflows/Plone%20package/badge.svg
     :target: https://github.com/collective/collective.linkconsentinfo/actions
 
 .. image:: https://coveralls.io/repos/github/collective/collective.linkconsentinfo/badge.svg?branch=master
@@ -17,7 +17,7 @@
     :target: https://pypi.python.org/pypi/collective.linkconsentinfo
     :alt: Egg Status
 
-.. image:: https://img.shields.io/pypi/pyversions/collective.linkconsentinfo.svg?style=plastic   :alt: Supported - Python Versions
+.. image:: https://img.shields.io/pypi/pyversions/collective.linkconsentinfo.svg?style=plastic   :alt: supported - Python versions
 
 .. image:: https://img.shields.io/pypi/l/collective.linkconsentinfo.svg
     :target: https://pypi.python.org/pypi/collective.linkconsentinfo/

@@ -24,9 +24,9 @@
     :alt: License
 
 
-==============================
-collective.linkconsentinfo WIP
-==============================
+==========================
+collective.linkconsentinfo
+==========================
 
 A consent info page for Plone Links, which allows you to show a custom info message before the user open's the link.
 
@@ -36,7 +36,6 @@ Features
 - LinkConsentInfo behavior, add's a checkbox to enable a consent info page for a link object
 - Prevent redirection when link consent info is enabled
 - Control panel to define a custom html text to show to the user, before she follows the link
-
 
 
 Translations

@@ -19,10 +19,6 @@
 
 .. image:: https://img.shields.io/pypi/pyversions/collective.linkconsentinfo.svg?style=plastic   :alt: supported - Python versions
 
-.. image:: https://img.shields.io/pypi/l/collective.linkconsentinfo.svg
-    :target: https://pypi.python.org/pypi/collective.linkconsentinfo/
-    :alt: License
-
 
 ==========================
 collective.linkconsentinfo

@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1 (unreleased)
+1.1 (2021-06-07)
 ----------------
 
 - Hide consent info text in link view, when the consent_info is not enabled

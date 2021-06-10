@@ -4,6 +4,7 @@ from collective.linkconsentinfo import _
 from collective.linkconsentinfo.controlpanels.link_consent_info import (
     ILinkConsentInfoControlPanel,
 )
+from plone import api
 from plone.app.contenttypes.browser.link_redirect_view import (
     LinkRedirectView,
     NON_REDIRECTABLE_URL_SCHEMES,
@@ -14,6 +15,7 @@ from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces import ITypesSchema
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from Products.statusmessages.interfaces import IStatusMessage
 from zope.component import getUtility
 
 import six
@@ -23,7 +25,6 @@ class LinkConsentInfo(LinkRedirectView):
     """ Subclass LinkRedirectView to inject link consent switch and template
     """
 
-    index = ViewPageTemplateFile("link_consent_info.pt")
 
     def __call__(self):
         """Redirect to the Link target URL, if and only if:
@@ -36,6 +37,8 @@ class LinkConsentInfo(LinkRedirectView):
         context = self.context
         mtool = getToolByName(context, "portal_membership")
 
+        self.can_edit = mtool.checkPermission("Modify portal content", context)
+
         registry = getUtility(IRegistry)
         settings = registry.forInterface(ITypesSchema, prefix="plone")
         link_consent_info_settings = registry.forInterface(
@@ -43,16 +46,18 @@ class LinkConsentInfo(LinkRedirectView):
         )
         self.consent_info_text = link_consent_info_settings.info
 
+        if context.enable_consent_info:
+            index = ViewPageTemplateFile("link_consent_info.pt")
+
         redirect_links = settings.redirect_links
 
-        can_edit = mtool.checkPermission("Modify portal content", context)
-        redirect_links = (
+        self.redirect_links = (
             redirect_links
             and not context.enable_consent_info
             and not self._url_uses_scheme(NON_REDIRECTABLE_URL_SCHEMES)
         )
 
-        if redirect_links and not can_edit:
+        if self.redirect_links and not self.can_edit:
             target_url = self.absolute_target_url()
             if six.PY2:
                 target_url = target_url.encode("utf-8")

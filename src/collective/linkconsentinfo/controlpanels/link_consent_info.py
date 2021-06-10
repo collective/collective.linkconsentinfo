@@ -20,7 +20,9 @@ class ILinkConsentInfoControlPanel(Interface):
         title=_(u"Consent Info Message",),
         description=_(u"The info messaged shown to users, when they click on a link. \nYou can use HTML-Syntax here.",),
         required=False,
-        default=u"",
+        default=_(u"""<h1>You are about to leave this Website</h1>
+<p>You are about to open an external website, we are not accountable for the content of external websites.</p>
+<p>Please note the data privacy rules of that website!</p>"""),
     )
 
 

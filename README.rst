@@ -65,6 +65,11 @@ Contribute
 - Issue Tracker: https://github.com/collective/collective.linkconsentinfo/issues
 - Source Code: https://github.com/collective/collective.linkconsentinfo
 
+Author
+------
+
+Maik Derstappen [MrTango] - `Derico <https://derico.de>`_
+
 
 Support
 -------

@@ -33,6 +33,10 @@ Features
 - Prevent redirection when link consent info is enabled
 - Control panel to define a custom html text to show to the user, before she follows the link
 
+.. image:: https://github.com/collective/collective.linkconsentinfo/raw/main/docs/link-consent-info.gif
+
+.. image:: https://github.com/collective/collective.linkconsentinfo/raw/main/docs/link_consent_info_controlpanel.png
+
 
 Translations
 ------------

@@ -11,7 +11,7 @@
     <metal:styles fill-slot="style_slot">
       <style>
 fieldset.external-link-consent-info{
-  border: 3px solid #e6e4e4;
+  border: 3px solid #007bb1;
   padding: 1em;
 }
 fieldset.external-link-consent-info a {
@@ -19,6 +19,9 @@ fieldset.external-link-consent-info a {
   animation-delay: 1s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
+}
+fieldset.external-link-consent-info a:hover {
+  text-decoration: none;
 }
 
 @keyframes borderanim {

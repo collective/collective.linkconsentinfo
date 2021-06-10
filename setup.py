@@ -13,7 +13,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='collective.linkconsentinfo',
-    version='1.1',
+    version='1.2',
     description="A consent info page for Plone Links, which allows you to show a custom info message before the user open's the link.",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/

@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 from collective.linkconsentinfo import _
-from datetime import date
 from plone import schema
 from plone.app.registry.browser.controlpanel import (
     ControlPanelFormWrapper,
     RegistryEditForm,
 )
-from plone.autoform import directives
+# from plone.autoform import directives
 from plone.z3cform import layout
 from zope.interface import Interface
 

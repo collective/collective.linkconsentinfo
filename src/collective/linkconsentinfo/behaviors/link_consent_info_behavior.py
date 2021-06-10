@@ -22,15 +22,10 @@ class ILinkConsentInfoBehavior(model.Schema):
 
     directives.widget(enable_consent_info=SingleCheckBoxBoolFieldWidget)
     enable_consent_info = schema.Bool(
-        title=_(
-            u'Enable Consent Info',
-        ),
-        description=_(
-            u'This will enable a consent info page for this link.',
-        ),
+        title=_(u"Enable Consent Info",),
+        description=_(u"This will enable a consent info page for this link.",),
         default=False,
     )
-
 
 
 @implementer(ILinkConsentInfoBehavior)
@@ -41,7 +36,7 @@ class LinkConsentInfoBehavior(object):
 
     @property
     def enable_consent_info(self):
-        if safe_hasattr(self.context, 'enable_consent_info'):
+        if safe_hasattr(self.context, "enable_consent_info"):
             return self.context.enable_consent_info
         return None
 

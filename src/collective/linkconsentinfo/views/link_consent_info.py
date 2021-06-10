@@ -1,21 +1,16 @@
 # -*- coding: utf-8 -*-
 
-from collective.linkconsentinfo import _
 from collective.linkconsentinfo.controlpanels.link_consent_info import (
     ILinkConsentInfoControlPanel,
 )
-from plone import api
 from plone.app.contenttypes.browser.link_redirect_view import (
     LinkRedirectView,
     NON_REDIRECTABLE_URL_SCHEMES,
-    NON_RESOLVABLE_URL_SCHEMES,
 )
 from plone.registry.interfaces import IRegistry
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces import ITypesSchema
-from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from Products.statusmessages.interfaces import IStatusMessage
 from zope.component import getUtility
 
 import six
@@ -24,7 +19,6 @@ import six
 class LinkConsentInfo(LinkRedirectView):
     """ Subclass LinkRedirectView to inject link consent switch and template
     """
-
 
     def __call__(self):
         """Redirect to the Link target URL, if and only if:
@@ -47,7 +41,7 @@ class LinkConsentInfo(LinkRedirectView):
         self.consent_info_text = link_consent_info_settings.info
 
         if context.enable_consent_info:
-            index = ViewPageTemplateFile("link_consent_info.pt")
+            index = ViewPageTemplateFile("link_consent_info.pt")  # NOQA: F841
 
         redirect_links = settings.redirect_links
 

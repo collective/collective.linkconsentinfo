@@ -2,6 +2,15 @@ Changelog
 =========
 
 
+1.2 (unreleased)
+----------------
+
+- Improve link consent info view
+  [MrTango]
+
+- Enable link consent behavior for Link CT by default
+  [MrTango]
+
 1.1 (2021-06-07)
 ----------------
 

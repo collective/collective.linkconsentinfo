@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.3 (unreleased)
+1.3 (2023-09-01)
 ----------------
 
 - fix dependencies to make it work on Python 3

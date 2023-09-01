@@ -5,7 +5,8 @@ Changelog
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- fix dependencies to make it work on Python 3
+  [MrTango]
 
 
 1.2 (2021-06-10)

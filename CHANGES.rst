@@ -5,7 +5,8 @@ Changelog
 1.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- remove unnecessary dependency to plone.restapi
+  [MrTango]
 
 
 1.3 (2023-09-01)

@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.4 (unreleased)
+1.4 (2025-04-01)
 ----------------
 
 - remove unnecessary dependency to plone.restapi

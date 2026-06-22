@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from collective.linkconsentinfo.controlpanels.link_consent_info import (
     ILinkConsentInfoControlPanel,
 )
@@ -8,12 +6,9 @@ from plone.app.contenttypes.browser.link_redirect_view import (
     NON_REDIRECTABLE_URL_SCHEMES,
 )
 from plone.registry.interfaces import IRegistry
-from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces import ITypesSchema
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.component import getUtility
-
-import six
 
 
 class LinkConsentInfo(LinkRedirectView):
@@ -29,9 +24,10 @@ class LinkConsentInfo(LinkRedirectView):
          - AND current user doesn't have permission to edit the Link"""
 
         context = self.context
-        mtool = getToolByName(context, "portal_membership")
 
-        self.can_edit = mtool.checkPermission("Modify portal content", context)
+        # ``can_edit`` is provided as a read-only property by the parent
+        # LinkRedirectView (plone.app.contenttypes >= 3.x / Plone 6.2), so we
+        # must not assign to it here. Just read self.can_edit below.
 
         registry = getUtility(IRegistry)
         settings = registry.forInterface(ITypesSchema, prefix="plone")
@@ -52,9 +48,6 @@ class LinkConsentInfo(LinkRedirectView):
         )
 
         if self.redirect_links and not self.can_edit:
-            target_url = self.absolute_target_url()
-            if six.PY2:
-                target_url = target_url.encode("utf-8")
-            return self.request.RESPONSE.redirect(target_url)
+            return self.request.RESPONSE.redirect(self.absolute_target_url())
         else:
             return self.index()

@@ -5,7 +5,11 @@ Changelog
 1.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Fix ``AttributeError`` on Plone 6.2 / plone.app.contenttypes where
+  ``can_edit`` became a read-only property; stop assigning to it in the view.
+  [MrTango]
+- Drop Python 2 leftovers (``six``, coding cookie) from the link consent view.
+  [MrTango]
 
 
 1.4 (2025-04-01)

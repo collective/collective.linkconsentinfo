@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.5 (unreleased)
+1.5 (2026-06-22)
 ----------------
 
 - Fix ``AttributeError`` on Plone 6.2 / plone.app.contenttypes where
